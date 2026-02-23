@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+    char s[100];
+    scanf("%s",s);
+    int f=0;
+    for(int i=0;i<strlen(s);i++)
+    {
+        f=f|(1<<(s[i]-'a'));
+    }
+    if(f==(1<<26)-1) printf("yes");
+    else printf("no");
+}
